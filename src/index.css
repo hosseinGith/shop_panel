@@ -1,0 +1,47 @@
+@import "tailwindcss";
+
+:root {
+    --background: #F5F7FA;
+    --background2: #fff;
+
+    --foreground: #000;
+    --low-text-color: #a0a0a0;
+    --primery: #2D60FF;
+    --primery-gradient: linear-gradient(#123288 0%, #295EEC 100%);
+    --primery2: #FEAA09;
+    --primery3: #343C6A;
+
+    --secondary1: #FE5C73;
+
+    --success: #0a3942;
+    --success-text: #14CA74;
+
+
+    --danger: #3c2442;
+    --danger-text: #FF5A65;
+    --shadow: 4px 4px 18px -2px #E7E4E8;
+}
+
+body {
+    @apply text-[var(--foreground)] bg-[var(--background)]
+}
+
+.primery-gradient {
+    background: var(--primery-gradient);
+}
+
+.shadow {
+    @apply shadow-(--shadow)
+}
+
+input {
+    @apply outline-0
+}
+
+::-webkit-scrollbar {
+    @apply w-1
+}
+
+::-webkit-scrollbar-thumb {
+    @apply bg-(--primery)
+}
