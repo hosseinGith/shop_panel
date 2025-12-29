@@ -6,12 +6,17 @@
 
     --foreground: #000;
     --low-text-color: #a0a0a0;
+
     --primery: #2D60FF;
-    --primery-gradient: linear-gradient(#123288 0%, #295EEC 100%);
+    --primery-text: #fff;
+    --primery-gradient: linear-gradient(140deg, #4C49ED 0%, #0A06F4 100%);
     --primery2: #FEAA09;
     --primery3: #343C6A;
 
     --secondary1: #FE5C73;
+    --secondary2: #1814F3;
+    --secondary2-text: #fff;
+    --natural1: #EDF1F7;
 
     --success: #0a3942;
     --success-text: #14CA74;
@@ -24,6 +29,10 @@
 
 body {
     @apply text-[var(--foreground)] bg-[var(--background)]
+}
+
+#container {
+    @apply max-w-400 2xl:left-1/2 2xl:-translate-x-1/2
 }
 
 .primery-gradient {

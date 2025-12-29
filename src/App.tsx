@@ -9,7 +9,10 @@ function App() {
   return (
     <>
       <Icons />
-      <div className="fixed bg-(--background) left-0 top-0 w-full h-full lg:grid grid-cols-[max-content_1fr]">
+      <div
+        id="container"
+        className="fixed bg-(--background) left-0 top-0 w-full h-full lg:grid grid-cols-[max-content_1fr]"
+      >
         <BrowserRouter>
           <Aside />
 

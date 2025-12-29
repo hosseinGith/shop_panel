@@ -1,5 +1,6 @@
 import { motion, type Variants } from "motion/react";
 import { lazy } from "react";
+import MyCardsSection from "./components/MyCardsSection";
 const WeeklyActivity = lazy(
   () => import("./components/WeeklyActivitySection/WeeklyActivity")
 );
@@ -25,6 +26,7 @@ export default function Main() {
       variants={containerVariants}
       className="p-8 transition-all space-y-4 h-max"
     >
+      <MyCardsSection />
       <WeeklyActivity />
       <QuickTransferSection />
     </motion.div>
