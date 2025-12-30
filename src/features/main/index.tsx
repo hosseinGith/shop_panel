@@ -1,6 +1,7 @@
-import { motion, type Variants } from "motion/react";
+import { motion } from "motion/react";
 import { lazy } from "react";
 import MyCardsSection from "./components/MyCardsSection";
+import RecentTransaction from "./components/RecentTransaction";
 const WeeklyActivity = lazy(
   () => import("./components/WeeklyActivitySection/WeeklyActivity")
 );
@@ -8,27 +9,35 @@ const QuickTransferSection = lazy(
   () => import("./components/QuickTransferSection/")
 );
 
-const containerVariants: Variants = {
-  hidden: { opacity: 0 },
-  visible: {
-    opacity: 1,
-    transition: {
-      staggerChildren: 0.3, // تاخیر بین المان‌های فرزند
-    },
-  },
-};
-
 export default function Main() {
   return (
-    <motion.div
-      initial="hidden"
-      animate="visible"
-      variants={containerVariants}
-      className="p-8 transition-all space-y-4 h-max"
-    >
-      <MyCardsSection />
+    <div className="space-y-4 h-max">
+      <motion.div
+        initial={{ transform: "translateY(-100%)" }}
+        animate={{ transform: "translateY(0%)" }}
+        className="flex gap-4 justify-between"
+      >
+        <motion.div
+          initial={{ transform: "translateY(-100%)" }}
+          animate={{ transform: "translateY(0%)" }}
+        >
+          <MyCardsSection />
+        </motion.div>
+        <motion.div
+          initial={{ transform: "translateY(-140%)" }}
+          animate={{ transform: "translateY(0%)" }}
+          transition={{
+            duration: 0.8,
+            delay: 0.5,
+            ease: [0, 0.71, 0.2, 1.01],
+          }}
+          className="transition-all delay-300 duration-500"
+        >
+          <RecentTransaction />
+        </motion.div>
+      </motion.div>
       <WeeklyActivity />
       <QuickTransferSection />
-    </motion.div>
+    </div>
   );
 }

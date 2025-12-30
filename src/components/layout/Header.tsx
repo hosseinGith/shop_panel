@@ -1,11 +1,15 @@
+import { useLocation } from "react-router-dom";
 import LabelInput from "../ui/LabelInput";
 import Use from "../ui/Use";
 
 export default function Header() {
+  const location = useLocation();
   return (
     <header className="sticky z-50 py-8 px-4 lg:flex-row flex-col gap-y-4 flex justify-between top-0 left-0 bg-(--background2)">
       <div className="flex  justify-between">
-        <h1 className="text-3xl font-medium">Overview</h1>
+        <h1 className="text-3xl font-medium">
+          {location.pathname ? location.pathname.replace("/", "") : "Overview"}
+        </h1>
         <div className="bg-[#26d1d150] lg:hidden h-14 min-w-14 rounded-full"></div>
       </div>
       <div className="gap-4 lg:flex hidden">
@@ -49,7 +53,7 @@ export default function Header() {
         value=""
         placeholder="Search for something"
         onChange={() => {}}
-         className="lg:hidden"
+        className="lg:hidden"
       >
         <svg
           className="size-6"
