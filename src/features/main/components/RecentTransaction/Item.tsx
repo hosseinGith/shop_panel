@@ -6,12 +6,16 @@ export default function Item({
   date,
   amount,
   bgColor,
+  classNameDate = `text-(--low-text-color)`,
+  isHaveAmmountColor = false,
 }: {
   type: string;
   date: string;
   bgColor: string;
   children: ReactNode;
   amount: number;
+  classNameDate?: string;
+  isHaveAmmountColor?: boolean;
 }) {
   return (
     <div className="flex justify-between items-center gap-4 py-2 ">
@@ -24,15 +28,20 @@ export default function Item({
         </div>
         <div>
           <p>{type}</p>
-          <p className="text-(--low-text-color)">{date}</p>
+          <p className={classNameDate}>{date}</p>
         </div>
       </div>
       <p
         className={`${
-          amount < 0 ? "text-(--danger-text)" : "text-(--success-text)"
+          isHaveAmmountColor
+            ? amount < 0
+              ? "text-(--danger-text)"
+              : "text-(--success-text)"
+            : ""
         }`}
       >
-        {amount < 0 && "-"}${Math.abs(amount).toLocaleString()}
+        {isHaveAmmountColor && amount < 0 && "-"}$
+        {Math.abs(amount).toLocaleString()}
       </p>
     </div>
   );

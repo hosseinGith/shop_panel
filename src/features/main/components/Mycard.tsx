@@ -7,7 +7,7 @@ export default function Mycard({
 }) {
   return (
     <div
-      className={` w-max *:px-8  ${bgCalass} text-(--primery-text) pt-4 space-y-6 rounded-2xl `}
+      className={`w-full *:px-8 shadow ${bgCalass} text-(--primery-text) pt-4 space-y-6 rounded-2xl `}
     >
       <div className=" justify-between flex items-center">
         <div>
@@ -33,14 +33,16 @@ export default function Mycard({
       </div>
       <div className=" flex-col mx-auto *:justify-between ">
         <table>
-          <tr className="text-(--low-text-color)">
-            <th className="pr-15 font-normal">CARD HOLDER</th>
-            <td className="">VALID THRU</td>
-          </tr>
-          <tr>
-            <th className="pr-15 font-normal">Eddy Cusuma</th>
-            <td>12/22</td>
-          </tr>
+          <tbody>
+            <tr className="text-(--low-text-color)">
+              <th className="pr-15 font-normal">CARD HOLDER</th>
+              <td className="">VALID THRU</td>
+            </tr>
+            <tr>
+              <th className="pr-15 font-normal">Eddy Cusuma</th>
+              <td>12/22</td>
+            </tr>
+          </tbody>
         </table>
       </div>
       <div className="bg-linear-to-b flex justify-between  py-4 from-[#ffffff42] to-[#ffffff00]">

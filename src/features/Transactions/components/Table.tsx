@@ -9,7 +9,7 @@ const transactions = [
     card: "1234 ****",
     date: "28 Jan, 12.30 AM",
     amount: 2500,
-    receipt: "https://",
+    receipt: "/",
   },
   {
     description: "Freepik Sales",
@@ -18,7 +18,7 @@ const transactions = [
     card: "4321 ****",
     date: "25 Jan, 12.30 AM",
     amount: -150,
-    receipt: "https://",
+    receipt: "/",
   },
   {
     description: "Freepik Sales",
@@ -27,7 +27,7 @@ const transactions = [
     card: "4321 ****",
     date: "25 Jan, 12.30 AM",
     amount: 250,
-    receipt: "https://",
+    receipt: "/",
   },
 ];
 export default function Table() {

@@ -10,6 +10,8 @@ export default function RecentTransaction() {
           amount={-800}
           date="28 January 2021"
           type="Deposit from my Card"
+          isHaveAmmountColor
+          classNameDate="text-(--low-text-color)"
         >
           <svg
             viewBox="0 0 28 28"
@@ -32,6 +34,8 @@ export default function RecentTransaction() {
           </svg>
         </Item>
         <Item
+          isHaveAmmountColor
+          classNameDate="text-(--low-text-color)"
           bgColor="#E7EDFF"
           amount={2500}
           date="25 January 2021"
@@ -51,6 +55,8 @@ export default function RecentTransaction() {
           </svg>
         </Item>
         <Item
+          isHaveAmmountColor
+          classNameDate="text-(--low-text-color)"
           bgColor="#DCFAF8"
           amount={5400}
           date="21 January 2021"

@@ -1,5 +1,20 @@
 @import "tailwindcss";
 
+@font-face {
+    font-family: Roboto-bold;
+    src: url(/fonts/Roboto-Bold.ttf);
+}
+
+@font-face {
+    font-family: Roboto-Light;
+    src: url(/fonts/Roboto-Light.ttf);
+}
+
+@font-face {
+    font-family: Roboto-Regular;
+    src: url(/fonts/Roboto-Regular.ttf);
+}
+
 :root {
     --background: #F5F7FA;
     --background2: #fff;
@@ -37,8 +52,10 @@ html.dark {
 }
 
 body {
-    @apply text-[var(--foreground)] bg-[var(--background)]
+    @apply text-(--foreground) bg-(--background) font-[Roboto-Regular]
 }
+
+
 
 #container {
     @apply max-w-400 2xl:left-1/2 2xl:-translate-x-1/2

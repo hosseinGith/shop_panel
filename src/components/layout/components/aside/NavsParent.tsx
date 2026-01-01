@@ -22,7 +22,7 @@ const items = [
   },
   {
     iconId: "#Credit-Cards-icon",
-    title: "Credit-Cards",
+    title: "Credit Cards",
     href: "/Credit-Cards",
   },
   {

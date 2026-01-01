@@ -4,7 +4,6 @@ import Use from "../ui/Use";
 
 export default function Header() {
   const location = useLocation();
-  console.log(location.pathname);
 
   return (
     <header className="sticky z-50 py-8 px-4 lg:flex-row flex-col gap-y-4 flex justify-between top-0 left-0 bg-(--background2)">

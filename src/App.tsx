@@ -8,6 +8,7 @@ const Main = lazy(() => import("./features/main"));
 const Transactions = lazy(() => import("./features/Transactions"));
 const Accounts = lazy(() => import("./features/Accounts"));
 const Aside = lazy(() => import("./components/layout/Aside"));
+const Investments = lazy(() => import("./features/Investments"));
 
 const containerVariants: Variants = {
   hidden: { opacity: 0 },
@@ -42,6 +43,7 @@ function App() {
                 <Route path="/" element={<Main />} />
                 <Route path="/transactions" element={<Transactions />} />
                 <Route path="/Accounts" element={<Accounts />} />
+                <Route path="/Investments" element={<Investments />} />
                 <Route path="/dashbaord/reports" element={<Reports />} />
               </Routes>
             </motion.div>
