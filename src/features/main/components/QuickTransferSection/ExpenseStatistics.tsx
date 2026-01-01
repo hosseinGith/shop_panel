@@ -1,5 +1,5 @@
 import type { ApexOptions } from "apexcharts";
-import React, { useState } from "react";
+import { useState } from "react";
 import Chart from "react-apexcharts";
 // تایپ‌های مورد نیاز از ApexCharts را ایمپورت کنید
 

@@ -7,7 +7,7 @@ const Icons = lazy(() => import("./components/ui/Icons"));
 const Main = lazy(() => import("./features/main"));
 const Transactions = lazy(() => import("./features/Transactions"));
 const Accounts = lazy(() => import("./features/Accounts"));
-const Aside = lazy(() => import("./components/layout/Aside"));
+const Aside = lazy(() => import("./components/layout/components/Aside"));
 const Investments = lazy(() => import("./features/Investments"));
 
 const containerVariants: Variants = {
@@ -29,7 +29,9 @@ function App() {
         className="fixed bg-(--background) left-0 top-0 w-full h-full lg:grid grid-cols-[max-content_1fr]"
       >
         <BrowserRouter>
-          <Aside />
+          <div className="w-full lg:block hidden">
+            <Aside />
+          </div>
 
           <div className="overflow-auto h-full">
             <Header />

@@ -2,9 +2,9 @@ import Item from "./Item";
 
 export default function RecentTransaction() {
   return (
-    <div className="">
+    <div className="w-full">
       <h1 className="mb-8 title space-y-4">Recent Transaction</h1>
-      <div className="w-max *:px-8 bg-(--background2) pt-4 space-y-6 rounded-2xl shadow">
+      <div className=" *:px-8 bg-(--background2) w-full pt-4 space-y-6 rounded-2xl shadow">
         <Item
           bgColor="#FFF5D9"
           amount={-800}

@@ -10,7 +10,7 @@ export default function Item({
   type: string;
   bgColor: string;
   children: ReactNode;
-  amount: number;
+  amount: number | string;
 }) {
   return (
     <motion.div
@@ -28,7 +28,10 @@ export default function Item({
         </div>
         <div>
           <p className="text-(--low-text-color)">{type}</p>
-          <p className="text-xl font-bold">${amount.toLocaleString()}</p>
+          <p className="text-xl font-bold">
+            {typeof amount === "number" && "$" + amount.toLocaleString()}
+            {typeof amount === "string" && amount}
+          </p>
         </div>
       </div>
     </motion.div>

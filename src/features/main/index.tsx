@@ -11,11 +11,11 @@ const QuickTransferSection = lazy(
 
 export default function Main() {
   return (
-    <div className="space-y-4 h-max">
+    <div className="space-y-4 h-max ">
       <motion.div
         initial={{ transform: "translateY(-100%)" }}
         animate={{ transform: "translateY(0%)" }}
-        className="flex gap-4 justify-between"
+        className="flex gap-4  flex-col md:flex-row justify-between"
       >
         <motion.div
           initial={{ transform: "translateY(-100%)" }}
@@ -31,7 +31,7 @@ export default function Main() {
             delay: 0.5,
             ease: [0, 0.71, 0.2, 1.01],
           }}
-          className="transition-all delay-300 duration-500"
+          className="transition-all delay-300 duration-500" 
         >
           <RecentTransaction />
         </motion.div>

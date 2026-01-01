@@ -1,4 +1,3 @@
-import React from "react";
 
 export default function User({ job, name }: { job: string; name: string }) {
   return (

@@ -1,10 +1,10 @@
 import { Link } from "react-router-dom";
-import NavsParent from "./components/aside/NavsParent";
+import NavsParent from "./NavsParent";
 
 export default function Aside() {
   return (
     <div
-      className="overflow-auto bg-(--background2) lg:block hidden shadow-[#ffffff11] shadow pb-7"
+      className="overflow-auto bg-(--background2) h-full shadow pb-7"
       dir="rtl"
     >
       <aside dir="ltr" className="pt-8 *:h-max ">

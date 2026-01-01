@@ -18,7 +18,7 @@ export default function Item({
       <div className="flex gap-4 items-center">
         <div
           style={{ backgroundColor: bgColor }}
-          className=" rounded-2xl  w-15 h-15 grid justify-center items-center"
+          className=" rounded-2xl  w-15 h-15 grid justify-center items-center *:size-7"
         >
           {children}
         </div>
