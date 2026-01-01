@@ -4,11 +4,15 @@ import Use from "../ui/Use";
 
 export default function Header() {
   const location = useLocation();
+  console.log(location.pathname);
+
   return (
     <header className="sticky z-50 py-8 px-4 lg:flex-row flex-col gap-y-4 flex justify-between top-0 left-0 bg-(--background2)">
       <div className="flex  justify-between">
         <h1 className="text-3xl font-medium">
-          {location.pathname ? location.pathname.replace("/", "") : "Overview"}
+          {location.pathname.replace("/", "")
+            ? location.pathname.replace("/", "").replace("-", " ")
+            : "Overview"}
         </h1>
         <div className="bg-[#26d1d150] lg:hidden h-14 min-w-14 rounded-full"></div>
       </div>
