@@ -43,7 +43,7 @@ const transactions = [
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
       >
-        <g clip-path="url(#clip0_101_199)">
+        <g clipPath="url(#clip0_101_199)">
           <path
             d="M4.20898 21.5226C4.61349 21.5226 4.94141 21.1947 4.94141 20.7902C4.94141 20.3857 4.61349 20.0577 4.20898 20.0577C3.80448 20.0577 3.47656 20.3857 3.47656 20.7902C3.47656 21.1947 3.80448 21.5226 4.20898 21.5226Z"
             fill="#396AFF"
@@ -70,21 +70,15 @@ const transactions = [
 
 export default function LastTransaction() {
   return (
-    <div className="space-y-8 w-full">
+    <div className="space-y-8 w-full max-w-full overflow-hidden">
       <h1 className="title">Last Transaction</h1>
-      <div className=" overflow-auto bg-(--background2) rounded-2xl">
-        <table className="min-w-150 w-full">
-          <thead>
-            <th></th>
-            <th></th>
-            <th></th>
-            <th></th>
-            <th></th>
-          </thead>
+      <div className="overflow-auto max-w-full bg-(--background2) rounded-2xl shadow">
+        <table className="w-full">
           <tbody>
-            {transactions.map((trans) => {
+            {transactions.map((trans, i) => {
               return (
                 <motion.tr
+                  key={i}
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
                   className="*:p-4"
@@ -103,9 +97,9 @@ export default function LastTransaction() {
                       </div>
                     </div>
                   </td>
-                  <td>{trans.type}</td>
-                  <td>{trans.card}</td>
-                  <td>{trans.status}</td>
+                  <td className="md:table-cell hidden">{trans.type}</td>
+                  <td className="md:table-cell hidden">{trans.card}</td>
+                  <td className="md:table-cell hidden">{trans.status}</td>
                   <td>
                     <p
                       className={`text-xl font-bold ${

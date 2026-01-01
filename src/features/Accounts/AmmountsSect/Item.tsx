@@ -17,7 +17,7 @@ export default function Item({
       transition={{ delay: 0.2 }}
       initial={{ translateY: "-100%", scale: 0.45 }}
       animate={{ translateY: 0, scale: 1 }}
-      className="flex gap-4 bg-(--background2) w-full justify-center shadow items-center px-8 py-8 rounded-2xl"
+      className="flex gap-4 bg-(--background2) w-full justify-center shadow items-center  py-8 rounded-2xl"
     >
       <div className="flex gap-4">
         <div
